@@ -36,5 +36,29 @@ int main()
     run();
     return 0;
 }
+// Main game function
+void run()
+{
+    // Initialize the map
+    initMap();
+    running = true;
+    while (running) {
+        // If a key is pressed
+        if (kbhit()) {
+            // Change to direction determined by key pressed
+            changeDirection(getch());
+        }
+        // Update the map
+        update();
+
+        // Clear the screen
+        clearScreen();
+
+        // Print the map
+        printMap();
+
+        // delay 0.4 seconds
+        _sleep(400);
+    }
 
 
