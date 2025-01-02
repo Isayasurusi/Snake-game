@@ -12,3 +12,16 @@ void clearScreen();
 void generateFood();
 
 char getMapValue(int value);
+// Map dimensions
+const int mapwidth = 20;
+const int mapheight = 20;
+
+const int size = mapwidth * mapheight;
+
+// The tile values for the map
+int map[size];
+
+// Snake head details
+int headxpos;
+int headypos;
+int direction;
