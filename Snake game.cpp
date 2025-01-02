@@ -118,6 +118,28 @@ void move(int dx, int dy) {
     map[headxpos + headypos * mapwidth] = food + 1;
 
 }
+// Clears screen
+void clearScreen() {
+    // Clear the screen
+    system("cls");
+}
+
+// Generates new food on map
+void generateFood() {
+    int x = 0;
+    int y = 0;
+    do {
+        // Generate random x and y values within the map
+        x = rand() % (mapwidth - 2) + 1;
+        y = rand() % (mapheight - 2) + 1;
+
+        // If location is not free try again
+    } while (map[x + y * mapwidth] != 0);
+
+    // Place new food
+    map[x + y * mapwidth] = -2;
+}
+
 
 
 
