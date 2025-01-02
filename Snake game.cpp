@@ -165,6 +165,11 @@ void initMap()
     headxpos = mapwidth / 2;
     headypos = mapheight / 2;
     map[headxpos + headypos * mapwidth] = 1;
+    // Places top and bottom walls 
+    for (int x = 0; x < mapwidth; ++x) {
+        map[x] = -1;
+        map[x + (mapheight - 1) * mapwidth] = -1;
+    }
 
 
 
