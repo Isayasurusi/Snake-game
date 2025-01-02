@@ -158,6 +158,13 @@ void update() {
         if (map[i] > 0) map[i]--;
     }
 }
+// Initializes map
+void initMap()
+{
+    // Places the initual head location in middle of map
+    headxpos = mapwidth / 2;
+    headypos = mapheight / 2;
+    map[headxpos + headypos * mapwidth] = 1;
 
 
 
