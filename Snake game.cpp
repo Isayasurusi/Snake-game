@@ -60,5 +60,38 @@ void run()
         // delay 0.4 seconds
         _sleep(400);
     }
+  // Game Text
+    cout << "\t\tGame Over!" << endl << "\t\tYour score is: " << food;
+
+    // Stop console from closing instantly
+    cin.ignore();
+}
+
+// Changes snake direction from input
+void changeDirection(char key) {
+    /*
+      W
+    A + D
+      S
+      1
+    4 + 2
+      3
+    */
+    switch (key) {
+    case 'w':
+        if (direction != 2) direction = 0;
+        break;
+    case 'd':
+        if (direction != 3) direction = 1;
+        break;
+    case 's':
+        if (direction != 4) direction = 2;
+        break;
+    case 'a':
+        if (direction != 5) direction = 3;
+        break;
+    }
+}
+
 
 
