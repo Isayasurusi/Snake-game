@@ -191,6 +191,20 @@ void printMap()
         cout << endl;
     }
 }
+// Returns graphical character for display from map value
+char getMapValue(int value)
+{
+    // Returns a part of snake body
+    if (value > 0) return 'o';
+
+    switch (value) {
+        // Return wall
+    case -1: return 'X';
+        // Return food
+    case -2: return 'O';
+    }
+}
+
 
 
 
