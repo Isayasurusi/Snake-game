@@ -92,6 +92,34 @@ void changeDirection(char key) {
         break;
     }
 }
+// Moves snake head to new location
+void move(int dx, int dy) {
+    // determine new head position
+    int newx = headxpos + dx;
+    int newy = headypos + dy;
+
+    // Check if there is food at location
+    if (map[newx + newy * mapwidth] == -2) {
+        // Increase food value (body length)
+        food++;
+
+        // Generate new food on map
+        generateFood();
+    }
+
+    // Check location is free
+    else if (map[newx + newy * mapwidth] != 0) {
+        running = false;
+    }
+
+    // Move head to new location
+    headxpos = newx;
+    headypos = newy;
+    map[headxpos + headypos * mapwidth] = food + 1;
+
+}
+
+
 
 
 
