@@ -139,6 +139,25 @@ void generateFood() {
     // Place new food
     map[x + y * mapwidth] = -2;
 }
+// Updates the map
+void update() {
+    // Move in direction indicated
+    switch (direction) {
+    case 0: move(-1, 0);
+        break;
+    case 1: move(0, 1);
+        break;
+    case 2: move(1, 0);
+        break;
+    case 3: move(0, -1);
+        break;
+    }
+
+    // Reduce snake values on map by 1
+    for (int i = 0; i < size; i++) {
+        if (map[i] > 0) map[i]--;
+    }
+}
 
 
 
