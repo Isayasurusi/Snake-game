@@ -179,6 +179,19 @@ void initMap()
     // Generates first food
     generateFood();
 }
+// Prints the map to console
+void printMap()
+{
+    for (int x = 0; x < mapwidth; ++x) {
+        for (int y = 0; y < mapheight; ++y) {
+            // Prints the value at current x,y location
+            cout << getMapValue(map[x + y * mapwidth]);
+        }
+        // Ends the line for next x value
+        cout << endl;
+    }
+}
+
 
 
 
