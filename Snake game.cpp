@@ -25,3 +25,16 @@ int map[size];
 int headxpos;
 int headypos;
 int direction;
+// Amount of food the snake has (How long the body is)
+int food = 4;
+
+// Determine if game is running
+bool running;
+
+int main()
+{
+    run();
+    return 0;
+}
+
+
