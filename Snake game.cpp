@@ -170,6 +170,15 @@ void initMap()
         map[x] = -1;
         map[x + (mapheight - 1) * mapwidth] = -1;
     }
+ // Places left and right walls
+    for (int y = 0; y < mapheight; y++) {
+        map[0 + y * mapwidth] = -1;
+        map[(mapwidth - 1) + y * mapwidth] = -1;
+    }
+
+    // Generates first food
+    generateFood();
+}
 
 
 
